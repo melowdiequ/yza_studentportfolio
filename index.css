@@ -9,16 +9,18 @@ body {
 }
 
 .main-header {
-  background-color: #7e2b68;
+  background-color: #692457;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap:nowrap;
 }
 
 .main-header .school-logo {
   height: 50px;
-  width: 40px;
+  width: auto;
+  max-width: 100%;
 }
 
 .main-header nav a {
@@ -50,8 +52,8 @@ body {
 
 
 .hero-img img {
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 600px;
   border-radius: 20px;
   object-fit: cover;
   border: 5px solid #E53888;
@@ -331,4 +333,118 @@ footer {
 
 .social-links img:hover {
   transform: scale(1.2);
+}
+
+/* responsiveness */
+
+@media (max-width: 1024px) {
+  .hero {
+    gap: 60px;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .main-header nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-img,
+  .hero-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .skills-list li {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .badge,
+  .badge-mine {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .skills-list li img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
+    font-size: 13px;
+  }
+
+  .social-links img {
+    width: 24px;
+    height: 24px;
+  }
 }
